@@ -1,7 +1,6 @@
-incomeCap = [0,10000,30000,100000,9999999]
-taxRates = [0.00,0.10,0.25,0.40]
-
-def tax(income):
+def tax(income: int)->int:
+	incomeCap = [0,10000,30000,100000,9999999]
+	taxRates = [0.00,0.10,0.25,0.40]
 	tax = 0.0
 	for i in range(len(incomeCap)-1):
 		tax = (max(income - incomeCap[i],0) - max(income - incomeCap[i+1],0)) * taxRates[i] + tax
